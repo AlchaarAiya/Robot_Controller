@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Robot Control Panel</title>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+    </head>
+
+    <body>
+        <div id="wrapper">
+        
+        <h1>Robot Base Control Panel</h1>
+
+        <form name="saveForm" action="baseMotion.php" method="POST">
+            <table>
+                <tr> <td></td> <td><input type="submit" name="f" value="Forward"/></td> <td></td> </tr>
+                
+                <tr> <td><input type="submit" name="l" value="Left"/></td> 
+                    <td><input type="submit" name="stop" value="Stop"/></td> 
+                    <td><input type="submit" name="r" value="Right"/></td> </tr>
+                
+                <tr> <td></td> <td><input type="submit" name="b" value="Backward"/></td> <td></td> </tr>
+            </table>
+        </form>
+     
+    </div>
+    </body>
+</html>
