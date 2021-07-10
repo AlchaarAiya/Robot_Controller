@@ -1,0 +1,624 @@
+{
+  "intents": [
+    {
+      "intent": "bye",
+      "examples": [
+        {
+          "text": "bye"
+        },
+        {
+          "text": "Bye Bye"
+        },
+        {
+          "text": "Cool, thanks"
+        },
+        {
+          "text": "See you"
+        },
+        {
+          "text": "Thanks"
+        },
+        {
+          "text": "thank you"
+        },
+        {
+          "text": "Thank You very much"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "direction",
+      "examples": [
+        {
+          "text": "backward"
+        },
+        {
+          "text": "down"
+        },
+        {
+          "text": "forward"
+        },
+        {
+          "text": "left"
+        },
+        {
+          "text": "right"
+        },
+        {
+          "text": "up"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "fineNode",
+      "examples": [
+        {
+          "text": "Fine, how about you?"
+        },
+        {
+          "text": "Fine thanks"
+        },
+        {
+          "text": "good"
+        },
+        {
+          "text": "good, about you"
+        },
+        {
+          "text": "great"
+        },
+        {
+          "text": "I'm doing great"
+        },
+        {
+          "text": "I'm fine"
+        },
+        {
+          "text": "I'm fine thank you"
+        },
+        {
+          "text": "I'm good"
+        },
+        {
+          "text": "I'm ok"
+        },
+        {
+          "text": "Really good"
+        },
+        {
+          "text": "Surviving"
+        },
+        {
+          "text": "Surviving Actually!"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "HelloMessage",
+      "examples": [
+        {
+          "text": "Good Afternoon"
+        },
+        {
+          "text": "Good Evening"
+        },
+        {
+          "text": "Good Mornig"
+        },
+        {
+          "text": "Good Morning"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hello there"
+        },
+        {
+          "text": "Hi"
+        },
+        {
+          "text": "Hi there"
+        },
+        {
+          "text": "Welcome"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "motor",
+      "examples": [
+        {
+          "text": "Motor 1"
+        },
+        {
+          "text": "Motor 2"
+        },
+        {
+          "text": "Motor 3"
+        },
+        {
+          "text": "Motor 4"
+        },
+        {
+          "text": "Motor 5"
+        },
+        {
+          "text": "Motor 6"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "enteredSuccess",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "entered",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "input",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "successful",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "robotArm",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Arm",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Arm motor",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Motors",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Motor Values",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Robot Arm",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "robot arm motion",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "robot arm motor",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "robot arm values",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "robotBase",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Base",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Base motion",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Base movement",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Base values",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "drive",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "forward",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Move",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Movement",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "walk",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello! I'm Bondoq, Your personal assistant for this website! How are you doing?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_7_1625920780765",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "WelcomeNode",
+      "output": {
+        "generic": [
+          {
+            "title": "Welcome My Friend to this Cool Website!",
+            "options": [
+              {
+                "label": "Robot Arm",
+                "value": {
+                  "input": {
+                    "text": "Robot Arm"
+                  }
+                }
+              },
+              {
+                "label": "Robot Base",
+                "value": {
+                  "input": {
+                    "text": "Robot Base"
+                  }
+                }
+              }
+            ],
+            "description": "Please choose which part of the robot to control",
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "#HelloMessage",
+      "dialog_node": "node_1_1625912643750"
+    },
+    {
+      "type": "standard",
+      "title": "FineNode",
+      "output": {
+        "generic": [
+          {
+            "title": "Cool! How about we start moving the robot? ",
+            "options": [
+              {
+                "label": "Robot Arm",
+                "value": {
+                  "input": {
+                    "text": "Robot Arm"
+                  }
+                }
+              },
+              {
+                "label": "Robot Base",
+                "value": {
+                  "input": {
+                    "text": "Robot Base"
+                  }
+                }
+              }
+            ],
+            "description": "Please choose which part of the robot you want to move",
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "#fineNode",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_2_1625912816693",
+      "previous_sibling": "node_1_1625912643750"
+    },
+    {
+      "type": "standard",
+      "title": "NextChoice",
+      "output": {
+        "generic": [
+          {
+            "title": "Result Entered Successfully!",
+            "options": [
+              {
+                "label": "Robot Arm Control ",
+                "value": {
+                  "input": {
+                    "text": "Robot Arm"
+                  }
+                }
+              },
+              {
+                "label": "Robot Base Control",
+                "value": {
+                  "input": {
+                    "text": "Robot Base"
+                  }
+                }
+              },
+              {
+                "label": "That's it, Thank you",
+                "value": {
+                  "input": {
+                    "text": "Bye"
+                  }
+                }
+              }
+            ],
+            "description": "Choose Next Step",
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "@enteredSuccess",
+      "dialog_node": "node_4_1625919952774",
+      "previous_sibling": "node_4_1625920857535"
+    },
+    {
+      "type": "standard",
+      "title": "BaseDirection",
+      "output": {
+        "generic": [
+          {
+            "title": "Choose the direction to move the base",
+            "options": [
+              {
+                "label": "Forward",
+                "value": {
+                  "input": {
+                    "text": "entered"
+                  }
+                }
+              },
+              {
+                "label": "Backward",
+                "value": {
+                  "input": {
+                    "text": "entered"
+                  }
+                }
+              },
+              {
+                "label": "Left",
+                "value": {
+                  "input": {
+                    "text": "entered"
+                  }
+                }
+              },
+              {
+                "label": "Right",
+                "value": {
+                  "input": {
+                    "text": "entered"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "@robotBase",
+      "dialog_node": "node_4_1625920857535",
+      "previous_sibling": "node_6_1625919855541"
+    },
+    {
+      "type": "standard",
+      "title": "WhichMotor",
+      "output": {
+        "generic": [
+          {
+            "title": "Please choose the motor to alter its value",
+            "options": [
+              {
+                "label": "Motor 1",
+                "value": {
+                  "input": {
+                    "text": "Motor 1"
+                  }
+                }
+              },
+              {
+                "label": "Motor 2",
+                "value": {
+                  "input": {
+                    "text": "Motor 2"
+                  }
+                }
+              },
+              {
+                "label": "Motor 3",
+                "value": {
+                  "input": {
+                    "text": "Motor 3"
+                  }
+                }
+              },
+              {
+                "label": "Motor 4",
+                "value": {
+                  "input": {
+                    "text": "Motor 4"
+                  }
+                }
+              },
+              {
+                "label": "Motor 5",
+                "value": {
+                  "input": {
+                    "text": "Motor 5"
+                  }
+                }
+              },
+              {
+                "label": "Motor 6",
+                "value": {
+                  "input": {
+                    "text": "Motor 6"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "@robotArm:(Robot Arm)",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_5_1625914942646",
+      "previous_sibling": "node_2_1625912816693"
+    },
+    {
+      "type": "standard",
+      "title": "MotorValue",
+      "output": {
+        "generic": [
+          {
+            "title": "Choose a degree for the motor",
+            "options": [
+              {
+                "label": "45 degrees",
+                "value": {
+                  "input": {
+                    "text": "entered"
+                  }
+                }
+              },
+              {
+                "label": "90 degrees",
+                "value": {
+                  "input": {
+                    "text": "entered"
+                  }
+                }
+              },
+              {
+                "label": "180 degrees",
+                "value": {
+                  "input": {
+                    "text": "entered"
+                  }
+                }
+              },
+              {
+                "label": "360 degrees",
+                "value": {
+                  "input": {
+                    "text": "entered"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "#motor",
+      "dialog_node": "node_6_1625919855541",
+      "previous_sibling": "node_5_1625914942646"
+    },
+    {
+      "type": "standard",
+      "title": "ByeNode",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "See you soon!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#bye",
+      "dialog_node": "node_7_1625920780765",
+      "previous_sibling": "node_4_1625919952774"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "intent_classification": {
+      "training_backend_version": "v2"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "Bondoq Skill",
+  "language": "en",
+  "description": ""
+}
