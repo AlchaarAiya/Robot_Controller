@@ -7,6 +7,8 @@ Furthermore, a chatbot was created using IBM Watson Assistant and it was integra
 The chatbot gives the user the option to choose whether to control the arm or the base, 
 and it gives options to make the process easier for the user.
 
+The JSON file for the chatbot was also added to this project.
+
 
 The robot arm has 6 motors, 
 and the user can control the arm by setting the angle for each motor using this project.
